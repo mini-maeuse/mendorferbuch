@@ -94,7 +94,7 @@
 .speed-line {
   position: absolute;
   height: 2px;
-  background: linear-gradient(90deg, hsl(51 100% 50% / 0.6), transparent);
+  background: linear-gradient(90deg, hsl(0 0% 0% / 0.4), transparent);
   border-radius: 2px;
 }
 
