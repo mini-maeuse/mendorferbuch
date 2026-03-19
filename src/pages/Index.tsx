@@ -1,11 +1,14 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import pdfFile from "@/assets/ausschreibung.pdf";
 
-const PDF_PATH =
-  import.meta.env.BASE_URL
-    ? import.meta.env.BASE_URL + "ausschreibung.pdf"
-    : "ausschreibung.pdf";
+const PDF_PATH = pdfFile;
+
+//const PDF_PATH =
+//  import.meta.env.BASE_URL
+//    ? import.meta.env.BASE_URL + "ausschreibung.pdf"
+//    : "ausschreibung.pdf";
 
 const Index = () => {
   return (
