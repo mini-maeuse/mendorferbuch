@@ -50,10 +50,10 @@ const Index = () => {
         <div className="pdf-card w-full max-w-4xl bg-card rounded-xl overflow-hidden">
           <div className="w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
           <iframe
-            src={PDF_PATH}
+            src={`${PDF_PATH}#view=FitH&scrollbar=1&toolbar=0`}
             title="Vereinsdokument"
             className="w-full border-0"
-            style={{ height: "70vh", minHeight: "400px" }}
+            style={{ height: "calc(100vh - 200px)", minHeight: "600px" }}
           />
         </div>
       </main>
