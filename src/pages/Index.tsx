@@ -3,12 +3,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import pdfFile from "@/assets/ausschreibung.pdf";
 
-//const PDF_PATH = pdfFile;
-
-const PDF_PATH =
-  import.meta.env.BASE_URL
-    ? import.meta.env.BASE_URL + "ausschreibung.pdf"
-    : "ausschreibung.pdf";
+const PDF_PATH = pdfFile;
 
 const Index = () => {
   return (
@@ -23,13 +18,7 @@ const Index = () => {
             <div className="speed-line" style={{ top: '30%', right: '5%', width: '50px', background: 'linear-gradient(270deg, hsl(0 0% 0% / 0.4), transparent)' }} />
             <div className="speed-line" style={{ top: '70%', right: '8%', width: '35px', background: 'linear-gradient(270deg, hsl(0 0% 0% / 0.4), transparent)' }} />
           </div>
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider"
-            style={{
-              color: 'hsl(0 0% 0%)',
-              textShadow: '0 2px 8px hsl(0 0% 0% / 0.15), 0 4px 20px hsl(51 100% 50% / 0.3)',
-            }}
-          >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wider text-black drop-shadow-lg">
             Mini Mäuse Mendorferbuch
           </h1>
           <p className="mt-2 text-sm sm:text-base text-muted-foreground tracking-widest uppercase">
@@ -41,11 +30,7 @@ const Index = () => {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center px-4 py-8 gap-6">
         {/* Download Button */}
-        <Button
-          asChild
-          size="lg"
-          className="btn-sport text-base font-bold tracking-wide rounded-lg"
-        >
+        <Button asChild size="lg" className="btn-sport text-base font-bold tracking-wide rounded-lg">
           <a href={PDF_PATH} download>
             <Download className="mr-2" />
             PDF herunterladen
