@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="w-full py-5 px-6" style={{ background: 'linear-gradient(180deg, hsl(51 100% 48%), hsl(51 100% 42%))' }}>
+  <footer className="w-full py-5 px-6" style={{ background: 'linear-gradient(135deg, hsl(51 100% 50%) 0%, hsl(51 100% 55%) 50%, hsl(51 100% 50%) 100%)' }}>
     <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-8 text-sm font-medium">
       <Link
         to="/impressum"
