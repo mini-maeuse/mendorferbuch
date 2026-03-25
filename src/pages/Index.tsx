@@ -9,8 +9,14 @@ import pdf2 from "@/assets/ausschreibung2.jpg";
 import pdf3 from "@/assets/ausschreibung3.jpg";
 import pdf4 from "@/assets/ausschreibung4.jpg";
 
-const PDF_PATH = pdfFile;
+// React PDF Viewer
+import { Worker, Viewer } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+
 const PDF_IMAGES = [pdf1, pdf2, pdf3, pdf4];
+const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
 const Index = () => {
   return (
@@ -51,39 +57,33 @@ const Index = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center px-4 py-8 gap-6">
-        {/* PDF Viewer */}
-        <div className="pdf-border-glow w-full max-w-4xl rounded-xl overflow-hidden">
-          <div className="bg-card rounded-xl overflow-hidden">
-            {/* Desktop: iframe */}
-            <div className="hidden sm:block">
-              <iframe
-                src={PDF_PATH}
-                className="w-full"
-                style={{ height: "90vh", minHeight: "600px", border: "none" }}
-                title="PDF Viewer"
-              />
+      <main className="flex-1 flex flex-col items-center px-4 py-8 gap-6 w-full">
+        {/* Desktop: interaktives PDF */}
+        <div className="hidden sm:block w-full max-w-5xl rounded-xl overflow-hidden bg-card pdf-border-glow">
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.10.911/build/pdf.worker.min.js">
+            <div className="h-[90vh] overflow-auto">
+              <Viewer fileUrl={pdfFile} plugins={[defaultLayoutPluginInstance]} />
             </div>
+          </Worker>
+        </div>
 
-            {/* Mobile: Bilder + Button */}
-            <div className="sm:hidden flex flex-col items-center p-4 gap-4">
-              {PDF_IMAGES.map((img, idx) => (
-                <img
-                  key={idx}
-                  src={img}
-                  alt={`PDF Seite ${idx + 1}`}
-                  className="rounded-lg shadow-lg w-full"
-                />
-              ))}
+        {/* Mobile: Bilder + Download Button oben */}
+        <div className="sm:hidden flex flex-col items-center p-4 gap-4 w-full max-w-md overflow-auto">
+          <Button asChild size="lg" className="btn-sport font-bold w-full">
+            <a href={pdfFile} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+              <Download className="mr-2" />
+              PDF öffnen
+            </a>
+          </Button>
 
-              <Button asChild size="lg" className="btn-sport font-bold">
-                <a href={PDF_PATH} target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2" />
-                  PDF öffnen
-                </a>
-              </Button>
-            </div>
-          </div>
+          {PDF_IMAGES.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`PDF Seite ${idx + 1}`}
+              className="rounded-lg shadow-lg w-full"
+            />
+          ))}
         </div>
       </main>
 
