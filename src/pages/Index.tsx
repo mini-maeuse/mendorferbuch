@@ -40,17 +40,32 @@ const Index = () => {
 
         {/* PDF Viewer */}
         <div className="pdf-border-glow w-full max-w-4xl rounded-xl overflow-hidden">
-          <div className="bg-card rounded-xl overflow-hidden">
-            <object
-              data={PDF_PATH}
-              type="application/pdf"
-              className="w-full"
-              style={{ height: "calc(100vh - 200px)", minHeight: "600px" }}
-            >
-              <p>PDF konnte nicht angezeigt werden.</p>
-            </object>
-          </div>
-        </div>
+  <div className="bg-card rounded-xl overflow-hidden">
+
+    {/* Desktop PDF Viewer */}
+    <div className="hidden sm:block">
+      <object
+        data={PDF_PATH}
+        type="application/pdf"
+        className="w-full"
+        style={{ height: "calc(100vh - 200px)", minHeight: "600px" }}
+      >
+        <p>PDF konnte nicht angezeigt werden.</p>
+      </object>
+    </div>
+
+    {/* Mobile Button */}
+    <div className="sm:hidden p-6 flex justify-center">
+      <Button asChild size="lg" className="btn-sport font-bold">
+        <a href={PDF_PATH} target="_blank" rel="noopener noreferrer">
+          <Download className="mr-2" />
+          PDF öffnen
+        </a>
+      </Button>
+    </div>
+
+  </div>
+</div>
       </main>
 
       <Footer />
