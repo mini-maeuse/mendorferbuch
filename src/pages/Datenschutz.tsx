@@ -28,9 +28,9 @@ const Datenschutz = () => (
         <p>
           Mini Mäuse Mendorferbuch e.V.<br />
           {/* Adresse hier eintragen */}
-          Musterstraße 1<br />
-          12345 Mendorferbuch<br />
-          E-Mail: {/* E-Mail eintragen */}info@mini-maeuse-mendorferbuch.de
+          Am Schloßacker 2a<br />
+          92277 Mendorferbuch<br />
+          E-Mail: {/* E-Mail eintragen */}martin.delling@web.de
         </p>
 
         <p><strong className="text-foreground">3. Einwilligungen</strong></p>

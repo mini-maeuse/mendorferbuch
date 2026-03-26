@@ -25,12 +25,12 @@ const Impressum = () => (
         <p>
           Mini Mäuse Mendorferbuch e.V.<br />
           {/* Adresse hier eintragen */}
-          Musterstraße 1<br />
-          12345 Mendorferbuch
+          Am Schloßacker 2a<br />
+          92277 Mendorferbuch
         </p>
-        <p><strong className="text-foreground">Vertreten durch:</strong><br />{/* Name des 1. Vorsitzenden */}Max Mustermann (1. Vorsitzender)</p>
-        <p><strong className="text-foreground">Kontakt:</strong><br />E-Mail: {/* E-Mail eintragen */}info@mini-maeuse-mendorferbuch.de</p>
-        <p><strong className="text-foreground">Registereintrag:</strong><br />Eingetragen im Vereinsregister<br />Registergericht: {/* Amtsgericht eintragen */}Amtsgericht Musterstadt<br />Registernummer: {/* Registernummer eintragen */}VR 12345</p>
+        <p><strong className="text-foreground">Vertreten durch:</strong><br />{/* Name des 1. Vorsitzenden */}Sebastian Delling (1. Vorsitzender)</p>
+        <p><strong className="text-foreground">Kontakt:</strong><br />E-Mail: {/* E-Mail eintragen */}martin.delling@web.de</p>
+        <p><strong className="text-foreground">Registereintrag:</strong><br />Eingetragen im Vereinsregister<br />Registergericht: {/* Amtsgericht eintragen */}Amtsgericht Amberg<br />Registernummer: {/* Registernummer eintragen */}VR 748</p>
 
         <p className="text-primary/50 italic">
           Haftungsausschluss: Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für Inhalte externer Links. Für diese sind ausschließlich die Betreiber verantwortlich.
