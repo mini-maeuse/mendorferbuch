@@ -17,18 +17,24 @@ const Impressum = () => (
       <Link to="/" className="inline-flex items-center gap-1 text-sm text-primary/70 hover:text-primary mb-6 transition-colors">
         <ArrowLeft className="w-4 h-4" /> Zurück zur Startseite
       </Link>
+
       <h2 className="text-2xl font-bold mb-6 text-foreground">Impressum</h2>
+
       <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
         <p><strong className="text-foreground">Angaben gemäß § 5 TMG:</strong></p>
         <p>
           Mini Mäuse Mendorferbuch e.V.<br />
+          {/* Adresse hier eintragen */}
           Musterstraße 1<br />
           12345 Mendorferbuch
         </p>
-        <p><strong className="text-foreground">Vertreten durch:</strong><br />Max Mustermann (1. Vorsitzender)</p>
-        <p><strong className="text-foreground">Kontakt:</strong><br />E-Mail: info@mini-maeuse-mendorferbuch.de</p>
-        <p><strong className="text-foreground">Registereintrag:</strong><br />Eingetragen im Vereinsregister.<br />Registergericht: Amtsgericht Musterstadt<br />Registernummer: VR 12345</p>
-        <p className="text-primary/50 italic">— Platzhalter-Inhalte. Bitte durch echte Angaben ersetzen. —</p>
+        <p><strong className="text-foreground">Vertreten durch:</strong><br />{/* Name des 1. Vorsitzenden */}Max Mustermann (1. Vorsitzender)</p>
+        <p><strong className="text-foreground">Kontakt:</strong><br />E-Mail: {/* E-Mail eintragen */}info@mini-maeuse-mendorferbuch.de</p>
+        <p><strong className="text-foreground">Registereintrag:</strong><br />Eingetragen im Vereinsregister<br />Registergericht: {/* Amtsgericht eintragen */}Amtsgericht Musterstadt<br />Registernummer: {/* Registernummer eintragen */}VR 12345</p>
+
+        <p className="text-primary/50 italic">
+          Haftungsausschluss: Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für Inhalte externer Links. Für diese sind ausschließlich die Betreiber verantwortlich.
+        </p>
       </div>
     </main>
 
